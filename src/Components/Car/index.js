@@ -14,7 +14,7 @@ function Car(props){
 
     useEffect(()=>{
         if(props.data.inMaintenance){
-            axios.get('http://localhost:3001/maintenancePerson/'+props.data.id)
+            axios.get('https://examenappbackend.herokuapp.com/maintenancePerson/'+props.data.id)
         .then(response  => {  
             setphase(2);  
             console.log(response);
@@ -44,7 +44,7 @@ function Car(props){
         
         console.log("IdAuto: "+props.data.id+" person:"+person+" date:"+date);
 
-        axios.post('http://localhost:3001/register', {
+        axios.post('https://examenappbackend.herokuapp.com/register', {
             idCar: props.data.id,
             person: person,
             date: date,
@@ -76,7 +76,7 @@ function Car(props){
                 {props.data.model}<br/>
             </div>
             <div>
-                <img className="carrImg" src={"http://localhost:3000/img/"+props.data.image} />
+                <img className="carrImg" src={"img/"+props.data.image} />
             </div>
             <div>
                 Description: {props.data.description}
