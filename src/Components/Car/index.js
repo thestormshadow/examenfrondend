@@ -49,19 +49,17 @@ function Car(props){
             person: person,
             date: date,
           })
-          .then(function (response) {
-            console.log(response);
-            clear()  
-            setphase(2);  
-            props.data.inMaintenance = true;
-            setpersonMaintenance(person);
-            setdateMaintenance(date); 
+          .then(function (response) {            
           })
           .catch(function (error) {
             console.log(error);
           });
 
-        
+            clear()  
+            setphase(2);  
+            props.data.inMaintenance = true;
+            setpersonMaintenance(person);
+            setdateMaintenance(date); 
     }
 
     const clear  = () => {
