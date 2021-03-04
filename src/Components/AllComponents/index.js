@@ -11,7 +11,7 @@ function  AllComponents(){
     }, []) 
     
     const getAllCars  = () => {
-        axios.get('http://localhost:3001/cars')
+        axios.get('https://examenappbackend.herokuapp.com/cars')
         .then(response  => {         
             setCars(response.data);
         })   
