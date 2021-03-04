@@ -27,11 +27,11 @@ function Car(props){
 
     const validate = () =>{
         if (person == ""){
-            alert("Ingresa una person");
+            alert("Enter a person");
             return false;
         }
         if (date == ""){
-            alert("Ingresa una date");
+            alert("Enter a date");
             return false;
         }
 
@@ -42,7 +42,7 @@ function Car(props){
         if(!validate())
             return false;
         
-        console.log("IdAuto: "+props.data.id+" person:"+person+" date:"+date);
+        console.log("IdCar: "+props.data.id+" person:"+person+" date:"+date);
 
         axios.post('https://examenappbackend.herokuapp.com/register', {
             idCar: props.data.id,
